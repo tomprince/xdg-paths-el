@@ -88,7 +88,10 @@
 ;;;
 ;;; History:
 ;;;
-;;;  0.1: Francisco Miguel Colaço <francisco.colaco@gmail.com>
+;;;  0.1.1: Francisco Miguel Colaço <francisco.col...@gmail.com>
+;;;    Removed stale code;
+;;;    Replaced eq by zerop in xdg-user-dir.
+;;;  0.1: Francisco Miguel Colaço <francisco.col...@gmail.com>
 ;;;    Directory variables;
 ;;;    Functions to locate files;
 ;;;    add-to-path and add-user-lisp-to-path;
@@ -139,12 +142,9 @@ This directory is added to \\[load-path].")
 
 If the command fails, return NIL."
   (let ((command (concat "xdg-user-dir " dirname)))
-    (if (eq (shell-command command) 0)
+    (if (zerop (shell-command command))
 	(substring (shell-command-to-string command) 0 -1)
       nil)))
-
-
-(if (zerop ()))
 
 
 (defun locate-user-file (filename &optional type)
@@ -199,8 +199,7 @@ it to `load-path`."
 
 
 ;; Determine the different paths for the user's directories.
-(labels ((getdir (variable fallback)
-))
+(labels ((getdir (variable fallback)))
   (setq user-emacs-config-directory (getdir "XDG_CONFIG_HOME" "~/.config/")
 	user-emacs-data-directory (getdir "XDG_DATA_HOME" "~/.local/share/")
 	user-emacs-cache-directory (getdir "XDG_CACHE_HOME" "~/.cache/")))
