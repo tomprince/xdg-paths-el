@@ -170,7 +170,7 @@ If the category is wrong, an error will be signaled.
 "
   (expand-file-name filename
 		    (case type
-		      ((nil 'data) user-emacs-data-directory)
+		      ((nil data) user-emacs-data-directory)
 		      ('config user-emacs-config-directory)
 		      ('lisp user-emacs-lisp-directory)
 		      ('cache user-emacs-cache-directory)
