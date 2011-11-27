@@ -201,13 +201,6 @@ it to `load-path`."
   (add-to-path (locate-user-lisp directory) append))
 
 
-;; Determine the different paths for the user's directories.
-(labels ((getdir (variable fallback)))
-  (setq user-emacs-config-directory (getdir "XDG_CONFIG_HOME" "~/.config/")
-	user-emacs-data-directory (getdir "XDG_DATA_HOME" "~/.local/share/")
-	user-emacs-cache-directory (getdir "XDG_CACHE_HOME" "~/.cache/")))
-
-
 ;; Set the default variables if they have no name.
 (macrolet ((setq-if-null (variable value)
 	     `(if (null ,variable)
