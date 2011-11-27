@@ -215,7 +215,7 @@ it to `load-path`."
   (setq-if-null user-emacs-data-directory (getdir "XDG_DATA_HOME" "~/.local/share/"))
   (setq-if-null user-emacs-cache-directory (getdir "XDG_CACHE_HOME" "~/.cache/"))
   (setq-if-null user-emacs-lisp-directory (expand-file-name "lisp" user-emacs-data-directory))
-  (setf-if-null user-documents-directory (or (xdg-user-dir "DOCUMENTS") "~/Documents")))
+  (setq-if-null user-documents-directory (or (xdg-user-dir "DOCUMENTS") "~/Documents")))
 
 
 ;; Set the user-emacs-directory to user-emacs-data-directory.
