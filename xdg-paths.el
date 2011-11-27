@@ -108,6 +108,9 @@
 ;;;   6. Make it within the default emacs distribution.
 ;;;
 
+(eval-when-compile
+  (require 'cl))
+
 ;;; Directories definition.
 (defvar user-emacs-config-directory nil
   "The directory where the emacs user configuration files are stored at.")
