@@ -88,6 +88,9 @@
 ;;;
 ;;; History:
 ;;;
+;;;  0.1.2: Tom Prince <tom.prince@ualberta.net>
+;;;    Require cl properly.
+;;;    Fix some typos and dead code.
 ;;;  0.1.1: Francisco Miguel Colaço <francisco.col...@gmail.com>
 ;;;    Removed stale code;
 ;;;    Replaced eq by zerop in xdg-user-dir.
