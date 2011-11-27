@@ -72,8 +72,8 @@
 ;;;     (add-user-lisp-to-path "yasnippet")
 ;;;
 ;;; The user documents directory can be made the initial buffer in case
-;;; no command line arguments are passed in: 
-;;; 
+;;; no command line arguments are passed in:
+;;;
 ;;;   (if (eql (length command-line-args) 1)
 ;;;      ;; No files were passed in the command line.
 ;;;      (setq initial-buffer-choice user-documents-directory))
