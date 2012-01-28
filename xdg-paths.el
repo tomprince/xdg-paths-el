@@ -1,4 +1,4 @@
-;;; XDG Base Directory Specification paths for emacs.
+;;; xdg-paths.el --- XDG Base Directory Specification paths for emacs.
 ;;;
 ;;;
 ;;; Copyright ©2011 Francisco Miguel Colaço <francisco.colaco@gmail.com>
@@ -110,6 +110,8 @@
 ;;;   5. Refactor the initialization of the variables.
 ;;;   6. Make it within the default emacs distribution.
 ;;;
+
+;;; Code:
 
 (eval-when-compile
   (require 'cl))
